@@ -3,3 +3,18 @@ table {
     color: white;
     padding: 20px;
 }
+
+.table_div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.link {
+    height: 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
