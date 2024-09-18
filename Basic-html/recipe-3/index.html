@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe 03</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="title">Carregando cervejas...</div>
+
+        <div id="novoDiv"></div>
+
+        <div>
+            <button id="botaoCarregar">Alterar</button>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function carregarDiv() {
+        let div = document.getElementById("novoDiv");
+
+        if (div.classList.contains('mostrar')) {
+            div.style.opacity = 0;
+            setTimeout(() => {
+                div.innerHTML = ""; 
+                div.classList.remove('mostrar');
+            }, 1000); 
+        } else {
+            div.innerHTML = "<h1>Guinness</h1>";
+            div.classList.add('mostrar');
+            setTimeout(() => {
+                div.style.opacity = 1; 
+            }, 10); 
+        }
+    }
+
+    let botao = document.getElementById("botaoCarregar");
+    botao.addEventListener("click", carregarDiv);
+</script>
+
+</html>
