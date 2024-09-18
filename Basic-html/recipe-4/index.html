@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe 04</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="beer" id="meu-amor">
+            <button id="botaoCarregar" class="button">
+                Carregando cervejas...
+            </button>
+        </div>
+
+            <button class="button" id="botaoOrdenar">
+                Ordenadar
+            </button>
+
+            <button class="button" id="botaoEmbaralhar">
+                Embaralhar
+            </button>
+    </div>
+
+</body>
+
+<script>
+    let cervejas = ["Guiness", "Desperados", "Becks", "Anomalia" , "PWeb" , "Mt-03"]
+
+    function transformarEmTabela(cervejas) {
+        let tabelaHtml = `<table border="1">
+            <thead>
+                <tr><th>Cerveja</th></tr>
+            </thead>
+            <tbody>
+                ${cervejas.map(cerveja => `<tr><td>${cerveja}</td></tr>`).join('')}
+            </tbody>
+        </table>`;
+        return tabelaHtml;
+    }
+
+    let botaoCarregar = document.getElementById("botaoCarregar");
+    botaoCarregar.addEventListener("click", carregarDiv);
+
+    function carregarDiv() {
+        let div = document.getElementById("meu-amor");
+        let cervejasHtml = transformarEmTabela(cervejas);
+        div.innerHTML = cervejasHtml;
+    }
+
+    let botaoOrdenar = document.getElementById("botaoOrdenar");
+    botaoOrdenar.addEventListener("click", ordenar);
+
+    function ordenar() {
+        cervejas.sort();
+        carregarDiv();   
+    }
+
+    let botaoEmbaralhar = document.getElementById("botaoEmbaralhar");
+    botaoEmbaralhar.addEventListener("click", embaralhar);
+
+    function embaralhar() {
+        cervejas = cervejas.sort(() => Math.random() - 0.5); 
+        carregarDiv();  
+    }
+
+</script>
+
+</html>
