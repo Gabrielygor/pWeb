@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe 04</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <a href="#" class="button" id="linkCarregar">Carregar motos...</a>
+        </div>
+        <div id="motosDiv"></div>
+
+        <a href="#" class="button" id="linkOrdenar">Ordenar</a>
+        <a href="#" class="button" id="linkEmbaralhar">Embaralhar</a>
+    </div>
+
+</body>
+
+<script>
+    let motos = ["Mt-03", "Cb-1000", "H2R", "BMW-SR1000", "Pop110", "Mt-07"]
+
+    const carregarDiv = bikes => {
+        const div = document.getElementById("motosDiv")
+        const motosHtml = bikes.map(item => `<h1>${item}</h1>`)
+        div.innerHTML = `${motosHtml.join("\n")}`
+    }
+
+    const ordenar = () => {
+        const motosOrdenadas = [...motos].sort()
+        carregarDiv(motosOrdenadas)
+    }
+
+    const embaralhar = () => {
+        const motosEmbaralhadas = [...motos].sort(() => Math.random() - 0.5)
+        carregarDiv(motosEmbaralhadas)
+    }
+
+    document.getElementById("linkCarregar").addEventListener("click", e => {
+        e.preventDefault()
+        carregarDiv(motos)
+    })
+
+    document.getElementById("linkOrdenar").addEventListener("click", e => {
+        e.preventDefault()
+        ordenar()
+    })
+
+    document.getElementById("linkEmbaralhar").addEventListener("click", e => {
+        e.preventDefault()
+        embaralhar()
+    })
+</script>
+
+</html>
