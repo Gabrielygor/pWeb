@@ -39,9 +39,14 @@
                 <th>Malts</th>
             </tr>
         </thead>
+
         <tbody id="cervejasBody">
 
         </tbody>
+        <div id="image">
+            <img id="errorImage" src="" alt="">
+        </div>
+
     </table>
 
     <script>
@@ -71,6 +76,7 @@
                 carregarTabela(cervejas);
             } catch (err) {
                 document.getElementById("cervejasTable").innerHTML = `FUCK ... Error: ${err} `;
+                document.getElementById("errorImage").src = "https://i.pinimg.com/564x/39/d3/62/39d3623339cb0bce17655a798028e481.jpg";
             }
         }
 
