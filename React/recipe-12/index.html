@@ -15,7 +15,7 @@
     <script src="libs/babel.js"></script>
 
     <script type="text/babel">
-        const TabelaBebidas = ({ titulo, cabecalhos, conteudo }) => {
+        const TabelaMotos = ({ titulo, cabecalhos, conteudo }) => {
             return (
                 <div>
                     <h1>{titulo}</h1>
@@ -54,7 +54,7 @@
         ];
 
         ReactDOM.render(
-            <TabelaBebidas titulo="Table" cabecalhos={valoresCabecalhos} conteudo={valoresConteudo} />,
+            <TabelaMotos titulo="Tabelas com motos, chupa Kwid capotado" cabecalhos={valoresCabecalhos} conteudo={valoresConteudo} />,
             document.getElementById("app")
         );
     </script>
