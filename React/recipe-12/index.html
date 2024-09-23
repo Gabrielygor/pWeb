@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>recipe 12 </title>
+    <link href="style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script src="libs/react.js"></script>
+    <script src="libs/react-dom.js"></script>
+    <script src="libs/babel.js"></script>
+
+    <script type="text/babel">
+        const TabelaBebidas = ({ titulo, cabecalhos, conteudo }) => {
+            return (
+                <div>
+                    <h1>{titulo}</h1>
+                    <table id="tabela" border="1">
+                        <thead>
+                            <tr>
+                                {cabecalhos.map((cabecalho, index) => (
+                                    <th key={index}>{cabecalho}</th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {conteudo.map((linha, index) => (
+                                <tr key={index}>
+                                    {linha.map((item, innerIndex) => (
+                                        <td key={innerIndex}>{item}</td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            );
+        }
+
+        const valoresCabecalhos = ["Nome", "Marca", "Cilindrada", "Ano" ,];
+        const valoresConteudo = [
+            ["MT-03", "Yamaha", "321cc", "2021"],
+            ["Ninja 400", "Kawasaki", "399cc", "2022"],
+            ["CB 650R", "Honda", "649cc", "2021"],
+            ["Ducati Monster", "Ducati", "937cc", "2023"],
+            ["GSX-R750", "Suzuki", "750cc", "2022"],
+            ["BMW S1000RR", "BMW", "999cc", "2023"],
+            ["XDiavel", "Ducati", "1262cc", "2021"],
+            ["R1200 GS", "BMW", "1170cc", "2022"]
+        ];
+
+        ReactDOM.render(
+            <TabelaBebidas titulo="Table" cabecalhos={valoresCabecalhos} conteudo={valoresConteudo} />,
+            document.getElementById("app")
+        );
+    </script>
+</body>
+
+</html>
