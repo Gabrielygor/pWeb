@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeStream - Assista Seus Animes Favoritos Onde Quiser (ATIVIDADE PROPOSTA EM SALA)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<!-- 
+    Basicamente o site é um esboço de um site de steaming de anime, foi feito utilizando o tailwind 
+-->
+
+
+<body class="bg-gray-900 text-white font-sans">
+
+    <header class="w-full bg-gray-800 py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-red-500">AnimeStream</h1>
+            <nav>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#" class="hover:text-red-500">Início</a></li>
+                    <li><a href="#" class="hover:text-red-500">Sobre</a></li>
+                    <li><a href="#" class="hover:text-red-500">Recursos</a></li>
+                    <li><a href="#" class="hover:text-red-500">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="bg-red-500 px-4 py-2 rounded hover:bg-red-600">Cadastre-se</a>
+        </div>
+    </header>
+
+    <section class="relative bg-cover bg-center h-screen"
+        style="background-image: url('https://example.com/anime-background.jpg');">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="container mx-auto flex flex-col items-center justify-center h-full text-center">
+            <h2 class="text-4xl lg:text-6xl font-extrabold text-red-500">Anime Ilimitado, a Qualquer Hora, em Qualquer
+                Lugar</h2>
+            <p class="mt-4 text-lg lg:text-2xl text-gray-300">Assista suas séries e filmes de anime favoritos em HD</p>
+            <a href="#" class="mt-8 bg-red-500 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-red-600">Comece a
+                Assistir</a>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto text-center">
+            <h3 class="text-3xl lg:text-4xl font-semibold text-red-500 mb-10">Por que Escolher o AnimeStream?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+                <div class="p-8 bg-gray-900 rounded-lg">
+                    <svg class="w-16 h-16 mx-auto text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4 15a4 4 0 008 0m-4-9v5m-1 0h2m6 0h2M4 10V9a7 7 0 1114 0v1a5 5 0 01-5 5H9a5 5 0 01-5-5z">
+                        </path>
+                    </svg>
+                    <h4 class="text-xl font-bold mt-6">Streaming em Alta Qualidade</h4>
+                    <p class="mt-2 text-gray-400">Aproveite animes em HD e 4K, com reprodução suave em qualquer
+                        dispositivo.</p>
+                </div>
+
+                <div class="p-8 bg-gray-900 rounded-lg">
+                    <svg class="w-16 h-16 mx-auto text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3v12m9-6h-6m-6 6H3M6 18h12m0 0a4 4 0 01-4 4H10a4 4 0 01-4-4z"></path>
+                    </svg>
+                    <h4 class="text-xl font-bold mt-6">Biblioteca Gigante</h4>
+                    <p class="mt-2 text-gray-400">Mais de 10.000 episódios e filmes de anime disponíveis para assistir.
+                    </p>
+                </div>
+
+                <div class="p-8 bg-gray-900 rounded-lg">
+                    <svg class="w-16 h-16 mx-auto text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15 17h5l-1.405-4.215a5 5 0 00-1.324-2.151L12 3.157 6.729 10.633a5 5 0 00-1.324 2.152L4 17h5m6 0a2 2 0 11-4 0m4 0H9">
+                        </path>
+                    </svg>
+                    <h4 class="text-xl font-bold mt-6">Assistir Offline</h4>
+                    <p class="mt-2 text-gray-400">Baixe episódios e assista-os offline, quando e onde quiser.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-700">
+        <div class="container mx-auto text-center">
+            <h3 class="text-3xl lg:text-4xl font-semibold text-red-500 mb-10">Escolha Seu Plano</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+                <div class="p-8 bg-gray-800 rounded-lg">
+                    <h4 class="text-2xl font-bold text-white">Básico</h4>
+                    <p class="mt-2 text-gray-400">Grátis</p>
+                    <ul class="mt-6 text-gray-400 space-y-2">
+                        <li>Acesso a 500+ títulos de anime</li>
+                        <li>Assista com anúncios</li>
+                        <li>Definição Padrão (SD)</li>
+                    </ul>
+                    <a href="#" class="block mt-8 bg-red-500 px-6 py-3 rounded-lg font-semibold hover:bg-red-600">Comece
+                        Agora</a>
+                </div>
+
+                <div class="p-8 bg-gray-800 rounded-lg">
+                    <h4 class="text-2xl font-bold text-white">Premium</h4>
+                    <p class="mt-2 text-gray-400">R$29,99/mês</p>
+                    <ul class="mt-6 text-gray-400 space-y-2">
+                        <li>Acesso a 10.000+ títulos de anime</li>
+                        <li>Sem anúncios</li>
+                        <li>Alta Definição (HD)</li>
+                    </ul>
+                    <a href="#"
+                        class="block mt-8 bg-red-500 px-6 py-3 rounded-lg font-semibold hover:bg-red-600">Assine</a>
+                </div>
+
+                <div class="p-8 bg-gray-800 rounded-lg">
+                    <h4 class="text-2xl font-bold text-white">Ultimate</h4>
+                    <p class="mt-2 text-gray-400">R$49,99/mês</p>
+                    <ul class="mt-6 text-gray-400 space-y-2">
+                        <li>Acesso ilimitado a todos os títulos</li>
+                        <li>Sem anúncios + Assistir offline</li>
+                        <li>4K Ultra HD + Multidispositivos</li>
+                    </ul>
+                    <a href="#"
+                        class="block mt-8 bg-red-500 px-6 py-3 rounded-lg font-semibold hover:bg-red-600">Assine</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto text-center">
+            <h3 class="text-3xl lg:text-4xl font-semibold text-red-500 mb-10">Os 3 Animes Mais Assistidos do Momento
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://i.pinimg.com/originals/39/66/db/3966db23d440c44395d78be057e6d164.gif" alt="Anime 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white">Car amime</h4>
+                        <p class="mt-2 text-gray-400">Anime com carro aleatório.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://i.pinimg.com/originals/49/2d/da/492dda54ed3017840e6465d8aa478335.gif" alt="Anime 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white">Naurto</h4>
+                        <p class="mt-2 text-gray-400">Loirinho que fica correndo atras do namorado o anime todo.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://i.pinimg.com/originals/e8/4e/db/e84edb279472c7ab49e97ec276d4ffda.gif" alt="Anime 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white">Jujutsu Kaisen</h4>
+                        <p class="mt-2 text-gray-400">Moleque que comeu o dedo do demonho. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-400">&copy; 2024 AnimeStream. Todos os direitos reservados.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-red-500">Política de Privacidade</a>
+                <a href="#" class="text-gray-400 hover:text-red-500">Termos de Serviço</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
