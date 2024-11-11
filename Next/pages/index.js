@@ -4,8 +4,8 @@ export default function Home() {
 
     return (
 
-        <div>
-            <h1>
+        <div className="w-screen h-screen bg-zinc-700 flex flex-col justify-center items-center">
+            <h1 className="text-7xl text-white">
                 Next Recipes
             </h1>
 
