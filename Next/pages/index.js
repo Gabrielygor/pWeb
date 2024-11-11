@@ -9,7 +9,7 @@ export default function Home() {
                 Next Recipes
             </h1>
 
-            <Card/>
+            <Card card='Card Component'/>
 
         </div>
 
