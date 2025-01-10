@@ -31,10 +31,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="bg-black text-white p-5 w-full">
+        <div className="bg-black text-white p-5 w-full flex gap-10">
           <Link href='/'>
             Back To Home
           </Link>
+
+          <h1>Barra fixa no Layout</h1>
+
         </div>
 
         {children}
