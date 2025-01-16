@@ -1,5 +1,4 @@
 import { TitleProp } from '@/components/TitleProp';
-import { Recipe1 } from './recipe-1/page'
 import Link from 'next/link';
 
 
@@ -8,7 +7,6 @@ export default function Home() {
     <div className="items-center justify-items-center ">
       <div>
 
-        <Recipe1 />
         <TitleProp title={'Titulo é uma Prop'} />
 
         <div>
@@ -18,10 +16,30 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='flex flex-col bg-black text-white p-4 gap-3 items-center'>
-        <Link href="/novarota">Rota1</Link>
-        <a href="/novarota">Rota 1, jeito antigo</a>
+      <div className='p-3 m-5 bg-black text-white rounded-lg'>
+        <Link href="/recipe1">Receita 1</Link>
       </div>
+
+      <div className='p-3 m-5 bg-black text-white rounded-lg'>
+        <Link href="/recipe2">Receita 2</Link>
+      </div>
+
+      <div className='p-3 m-5 bg-black text-white rounded-lg'>
+        <Link href="/recipe3">Receita 3</Link>
+      </div>
+
+      <div className='p-3 m-5 bg-black text-white rounded-lg'>
+        <Link href="/recipe4">Receita 4 e 5 </Link>
+      </div>
+
+      <div className='p-3 m-5 bg-black text-white rounded-lg'>
+        <Link href="/recipe6">Receita 6</Link>
+      </div>
+
+      {/* <div className='p-3 m-5 bg-black text-white rounded-lg'>
+        <Link href="/clientServerMovies">clientServerMovies</Link>
+      </div> */}
+
 
     </div>
   );
