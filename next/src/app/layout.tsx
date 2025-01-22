@@ -36,7 +36,7 @@ export default function RootLayout({
             Back To Home
           </Link>
 
-          <h1>Barra fixa no Layout</h1>
+          <h1>Barra fixa no Layout </h1>
 
         </div>
 
